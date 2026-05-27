@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportadora Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <header class="hero">
+        <div>
+            <span class="badge">
+                <i class="fa-solid fa-truck-fast"></i>
+                Sistema Logístico
+            </span>
+
+            <h1>
+                Dashboard de Transportadora
+            </h1>
+
+            <p>
+                Gestión moderna de clientes, envíos y reportes logísticos.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- FORMULARIO -->
+        <section class="card glass fade-up">
+
+            <div class="section-title">
+                <div>
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+
+                <div>
+                    <h2>Registrar Cliente</h2>
+                    <p>Agrega nuevos clientes al sistema.</p>
+                </div>
+            </div>
+
+            <form id="clienteForm" class="form-grid">
+
+                <div class="input-group">
+                    <label>Nombre</label>
+                    <input type="text" id="nombre" placeholder="Ej: Carlos Pérez">
+                </div>
+
+                <div class="input-group">
+                    <label>Teléfono</label>
+                    <input type="text" id="telefono" placeholder="3001234567">
+                </div>
+
+                <div class="input-group">
+                    <label>Correo</label>
+                    <input type="email" id="correo" placeholder="correo@gmail.com">
+                </div>
+
+                <div class="input-group full-width">
+                    <label>Dirección</label>
+                    <input type="text" id="direccion" placeholder="Dirección del cliente">
+                </div>
+
+                <button type="submit" class="primary-btn full-width-btn">
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    Guardar Cliente
+                </button>
+
+            </form>
+        </section>
+
+        <!-- CLIENTES -->
+        <section class="card glass fade-up delay-1">
+
+            <div class="top-bar">
+
+                <div class="section-title">
+                    <div>
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div>
+                        <h2>Clientes Registrados</h2>
+                        <p>Visualiza y administra los clientes.</p>
+                    </div>
+                </div>
+
+                <button onclick="listarClientes()" class="secondary-btn">
+                    <i class="fa-solid fa-rotate"></i>
+                    Actualizar
+                </button>
+
+            </div>
+
+            <div id="clientes" class="clientes-slider"></div>
+
+        </section>
+
+        <!-- REPORTES -->
+        <section class="card glass fade-up delay-2">
+
+            <div class="top-bar">
+
+                <div class="section-title">
+                    <div>
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
+                    <div>
+                        <h2>Reportes Logísticos</h2>
+                        <p>Indicadores clave de los envíos.</p>
+                    </div>
+                </div>
+
+                <button onclick="cargarReportes()" class="secondary-btn">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    Generar
+                </button>
+
+            </div>
+
+            <div id="reportes" class="report-grid"></div>
+
+        </section>
+
+    </main>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

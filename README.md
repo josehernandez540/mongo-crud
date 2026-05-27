@@ -2,17 +2,17 @@
 
 ## Levantamiento Backend
 
-´´´bash
+```bash
 cd backend
-´´´
+```
 
-´´´bash
+```bash
 pip install -r requirments.py
-´´´
+```
 
-´´´bash
+```bash
 app.main:app --reload 
-´´´
+```
 
 ## Levantamiento Front
 

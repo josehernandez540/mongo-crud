@@ -1,4 +1,4 @@
-const API = "https://mongo-crud-a5vs.onrender.com/"
+const API = "https://mongo-crud-a5vs.onrender.com"
 
 const form = document.getElementById("clienteForm")
 
